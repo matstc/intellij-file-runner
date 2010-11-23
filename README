@@ -1,0 +1,5 @@
+This is an IntelliJ plugin to run a file with a custom java runner.
+The plugin will pass in the name of the currently edited file as the only argument to your custom runner.
+Write a custom runner and specify its location in the settings of the plugin.
+
+To install the plugin, go to IntelliJ's home. You should see a directory called 'plugins'. Inside that directory, create the directory structure 'myrunner/lib' and paste the MyRunner.jar into 'lib'.
