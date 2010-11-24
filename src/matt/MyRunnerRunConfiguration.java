@@ -90,4 +90,11 @@ public class MyRunnerRunConfiguration extends RunConfigurationBase implements Mo
     }
 
 
+    public void setArgs(String args) {
+        this.args = args;
+    }
+
+    public void setMainClass(String mainClass) {
+        this.mainClass = mainClass;
+    }
 }

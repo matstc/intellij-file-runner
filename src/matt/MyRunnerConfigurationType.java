@@ -21,9 +21,9 @@ public class MyRunnerConfigurationType implements ConfigurationType {
 
             public RunConfiguration createConfiguration(String name, RunConfiguration template) {
                 final MyRunnerRunConfiguration pluginRunConfiguration = (MyRunnerRunConfiguration) template;
-                if (pluginRunConfiguration.getModule() == null) {
-                    pluginRunConfiguration.setModule(module);
-                }
+                pluginRunConfiguration.setMainClass(mainClass);
+                pluginRunConfiguration.setArgs(args);
+                pluginRunConfiguration.setModule(module);
 
                 return super.createConfiguration(name, pluginRunConfiguration);
             }
