@@ -10,8 +10,6 @@ import com.intellij.util.xmlb.XmlSerializerUtil;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
-import java.beans.PersistenceDelegate;
-import java.io.Serializable;
 
 @State(
         name = "MyRunnerSettings",

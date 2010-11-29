@@ -1,8 +1,12 @@
 package matt;
 
 import com.intellij.execution.*;
+import com.intellij.execution.application.ApplicationConfigurationType;
+import com.intellij.execution.impl.*;
+import com.intellij.execution.application.ApplicationConfiguration;
 import com.intellij.execution.configurations.RunConfiguration;
 import com.intellij.execution.executors.DefaultRunExecutor;
+import com.intellij.execution.impl.RunnerAndConfigurationSettingsImpl;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.execution.runners.ProgramRunner;
 import com.intellij.openapi.actionSystem.AnAction;
@@ -18,12 +22,12 @@ import com.intellij.openapi.vfs.VirtualFile;
 import org.apache.commons.lang.StringUtils;
 
 public class MyRunner extends AnAction {
+    private static final String MY_RUNNER = "MyRunner";
 
     public void actionPerformed(AnActionEvent e) {
-        System.out.println("Invoking My Runner");
-
         Application application = ApplicationManager.getApplication();
         MyRunnerComponent component = application.getComponent(MyRunnerComponent.class);
+
         String mainClassName = component.getMainClassName();
         if (mainClassName == null || mainClassName.isEmpty()) {
             say("Set the class of the runner in the My Runner settings.");
@@ -44,7 +48,7 @@ public class MyRunner extends AnAction {
             return;
         }
 
-        RunManager runManager = RunManager.getInstance(project);
+        RunManagerImpl runManager = (RunManagerImpl) RunManager.getInstance(project);
         Module module = ModuleManager.getInstance(project).findModuleByName(moduleNameOfRunner);
 
         if (module == null) {
@@ -53,14 +57,26 @@ public class MyRunner extends AnAction {
             return;
         }
 
-        String filename = file.getPath();
-        MyRunnerConfigurationType type = new MyRunnerConfigurationType(module, mainClassName, filename);
-        RunConfiguration runConfiguration = type.getConfigurationFactories()[0].createTemplateConfiguration(project);
+        RunnerAndConfigurationSettingsImpl runnerAndConfigurationSettings = findConfigurationByName(MY_RUNNER, runManager);
+        ApplicationConfiguration conf = null;
 
-        RunnerAndConfigurationSettings runnerAndConfigurationSettings = runManager.createRunConfiguration("My Runner", type.getConfigurationFactories()[0]);
+        if (runnerAndConfigurationSettings != null)     {
+            conf = (ApplicationConfiguration) runnerAndConfigurationSettings.getConfiguration();
+            updateConfiguration(mainClassName, file, module, conf);
+
+        } else {
+            MyRunnerConfigurationType type = application.getComponent(MyRunnerConfigurationType.class);
+            runnerAndConfigurationSettings = (RunnerAndConfigurationSettingsImpl) runManager.createRunConfiguration(MY_RUNNER, type.getConfigurationFactories()[0]);
+            conf = (ApplicationConfiguration) runnerAndConfigurationSettings.getConfiguration();
+            updateConfiguration(mainClassName, file, module, conf);
+            runManager.addConfiguration(runnerAndConfigurationSettings, true);
+        }
+        
+        runManager.setActiveConfiguration(runnerAndConfigurationSettings);
+
 
         Executor executor = DefaultRunExecutor.getRunExecutorInstance();
-        ProgramRunner runner = RunnerRegistry.getInstance().getRunner(executor.getId(), runConfiguration);
+        ProgramRunner runner = RunnerRegistry.getInstance().getRunner(executor.getId(), conf);
         ExecutionEnvironment environment = new ExecutionEnvironment(runner, runnerAndConfigurationSettings, e.getDataContext());
 
         try {
@@ -68,6 +84,21 @@ public class MyRunner extends AnAction {
         } catch (ExecutionException e1) {
             JavaExecutionUtil.showExecutionErrorMessage(e1, "Error", project);
         }
+    }
+
+    private RunnerAndConfigurationSettingsImpl findConfigurationByName(String name, RunManagerImpl runManager){
+        for (RunnerAndConfigurationSettings settings : runManager.getSortedConfigurations()){
+            if (settings.getName().equals(name))
+                return (RunnerAndConfigurationSettingsImpl) settings;
+        }
+        return null;
+
+    }
+
+    private void updateConfiguration(String mainClassName, VirtualFile file, Module module, ApplicationConfiguration conf) {
+        conf.setMainClassName(mainClassName);
+        conf.setProperty(RunJavaConfiguration.PROGRAM_PARAMETERS_PROPERTY, file.getPath());
+        conf.setModule(module);
     }
 
     public void say(String message) {

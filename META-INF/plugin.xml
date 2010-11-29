@@ -6,18 +6,18 @@
   <idea-version since-build="8000"/>
 
   <application-components>
-    <!-- Add your application components here -->
       <component>
           <implementation-class>matt.MyRunnerComponent</implementation-class>
+      </component>
+      <component>
+          <implementation-class>matt.MyRunnerConfigurationType</implementation-class>
       </component>
   </application-components>
 
   <project-components>
-    <!-- Add your project components here -->
   </project-components>
 
   <actions>
-    <!-- Add your actions here -->
       <action id="MyRunnerAction" class="matt.MyRunner" text="Feed to MyRunner" description="Runs a file">
           <add-to-group group-id="RunMenu" anchor="last"/>
           <keyboard-shortcut keymap="$default" first-keystroke="alt shift F8" />
@@ -25,6 +25,6 @@
   </actions>
 
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
+      <configurationType implementation="matt.MyRunnerConfigurationType"/>      
   </extensions>
 </idea-plugin>
