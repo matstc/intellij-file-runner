@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b7f8b1ad-f562-4a69-8604-e0f746215907" name="Default" comment="" />
-    <ignored path="MyRunner.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="MyRunner.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,57 +76,7 @@
   </component>
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MyRunner.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/matt/MyRunner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="18" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.35340315">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyRunnerComponent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matt/MyRunnerComponent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="22" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyRunnerConfigurationType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matt/MyRunnerConfigurationType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="16" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigurationFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../idea/platform/lang-api/src/com/intellij/execution/configurations/ConfigurationFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="72" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -197,6 +147,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,8 +211,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,7 +237,7 @@
       <recent name="matt.MyRunner" />
     </key>
   </component>
-  <component name="RunManager" selected="Plugin.MyRunner plugin">
+  <component name="RunManager" selected="Application.MyRunner">
     <configuration default="false" name="MainToo" type="Application" factoryName="Application" temporary="true">
       <extension name="snapshooter" />
       <option name="MAIN_CLASS_NAME" value="MainToo" />
@@ -424,6 +374,26 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="#myrunner" factoryName="My Runner">
+      <extension name="snapshooter" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="false" name="MyRunner plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="MyRunner" />
       <option name="VM_PARAMETERS" value="-XX:MaxPermSize=300m" />
@@ -439,9 +409,10 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.MainToo" />
       <item index="1" class="java.lang.String" itemvalue="Plugin.MyRunner plugin" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MyRunner" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -468,12 +439,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1442" height="878" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902297" sideWeight="0.59034485" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902297" sideWeight="0.59034485" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739726" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36301368" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -482,12 +451,14 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22054598" sideWeight="0.5849315" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21910919" sideWeight="0.5849315" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5849315" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40547946" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902297" sideWeight="0.59034485" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739726" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5849315" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -528,104 +499,72 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../../idea/java/execution/impl/src/com/intellij/execution/application/ApplicationConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="39" selection-start="2622" selection-end="2622" vertical-scroll-proportion="-7.2">
-          <folding />
-        </state>
+        <state line="57" column="39" selection-start="2622" selection-end="2622" vertical-scroll-proportion="-7.2" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../idea/platform/lang-impl/src/com/intellij/execution/impl/RunnerAndConfigurationSettingsImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="51" selection-start="3199" selection-end="3213" vertical-scroll-proportion="0.33167082">
-          <folding />
-        </state>
+        <state line="84" column="51" selection-start="3199" selection-end="3213" vertical-scroll-proportion="0.33167082" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../idea/platform/lang-api/src/com/intellij/execution/RunManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="700" selection-end="700" vertical-scroll-proportion="0.27631578">
-          <folding />
-        </state>
+        <state line="21" column="22" selection-start="700" selection-end="700" vertical-scroll-proportion="0.27631578" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/execution/impl/RunManagerImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="16" selection-start="12772" selection-end="12772" vertical-scroll-proportion="0.43693694">
-          <folding />
-        </state>
+        <state line="164" column="16" selection-start="12772" selection-end="12772" vertical-scroll-proportion="0.43693694" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../idea/platform/lang-api/src/com/intellij/execution/RunnerAndConfigurationSettings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="9" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.4070278">
-          <folding />
-        </state>
+        <state line="38" column="9" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.4070278" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../idea/platform/lang-impl/src/com/intellij/execution/impl/RunManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="52" selection-start="12019" selection-end="12019" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../idea/platform/lang-api/src/com/intellij/execution/configurations/ConfigurationFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="288" column="52" selection-start="12019" selection-end="12019" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../idea/java/execution/impl/src/com/intellij/execution/application/ApplicationConfigurationType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="56" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.2284041">
-          <folding />
-        </state>
+        <state line="48" column="56" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.2284041" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../idea/platform/platform-impl/src/com/intellij/ide/IdeEventQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="372" column="0" selection-start="11268" selection-end="11268" vertical-scroll-proportion="0.18740849">
-          <folding />
-        </state>
+        <state line="372" column="0" selection-start="11268" selection-end="11268" vertical-scroll-proportion="0.18740849" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/execution/application/ApplicationConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="1878" selection-end="1878" vertical-scroll-proportion="0.022522522">
-          <folding />
-        </state>
+        <state line="25" column="16" selection-start="1878" selection-end="1878" vertical-scroll-proportion="0.022522522" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+    <entry file="file://$PROJECT_DIR$/../../idea/platform/lang-api/src/com/intellij/execution/configurations/ConfigurationFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="72" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="25" column="61" selection-start="929" selection-end="929" vertical-scroll-proportion="0.15037593" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matt/MyRunnerConfigurationType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="18" column="45" selection-start="496" selection-end="496" vertical-scroll-proportion="0.32330826" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matt/MyRunnerComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="32" selection-start="815" selection-end="815" vertical-scroll-proportion="0.22556391" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matt/MyRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="18" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.35340315">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="70" column="29" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.5104712" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="72" selection-start="930" selection-end="930" vertical-scroll-proportion="0.69924814" />
       </provider>
     </entry>
   </component>
